@@ -1,0 +1,22 @@
+﻿<Window x:Class="XML_Telephone_book.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XML_Telephone_book"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgATS" HorizontalAlignment="Left" Height="330" AutoGenerateColumns="False" Margin="30,20,0,0" VerticalAlignment="Top" Width="735">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Binding="{Binding isFreePBX}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Width="105" Header="Тип"></DataGridCheckBoxColumn>
+                <DataGridTextColumn Binding="{Binding addressATS}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Width="105" Header="Адрес"/>
+                <DataGridTextColumn Binding="{Binding login}" CanUserReorder="False" CanUserResize="False" ClipboardContentBinding="{x:Null}" Width="105"  Header="Логин"/>
+                <DataGridTextColumn Binding="{Binding password}" CanUserReorder="False" CanUserResize="False" ClipboardContentBinding="{x:Null}" Width="105"  Header="Пароль"/>
+                <DataGridComboBoxColumn Header="Тип АТС" x:Name="dgcmbTypeATS" SelectedItemBinding="{Binding comboBoxTypeATS}" >
+                </DataGridComboBoxColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
